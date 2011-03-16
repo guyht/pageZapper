@@ -1,4 +1,4 @@
-(function() {
+$(document).ready(function() {
 function Asteroids() {
 	if ( ! window.ASTEROIDS )
 		window.ASTEROIDS = {
@@ -1113,4 +1113,4 @@ if ( window.ActiveXObject && ! document.createElement('canvas').getContext ) {
 }
 else window.ASTEROIDSPLAYERS[window.ASTEROIDSPLAYERS.length] = new Asteroids();
 
-})();
+});
