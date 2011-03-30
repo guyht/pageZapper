@@ -330,7 +330,7 @@ function Asteroids() {
 		that.enemies = [];
 		for ( var i = 0, el; el = all[i]; i++ ) {
 			// elements with className ASTEROIDSYEAH are part of the "game"
-			if ( indexOf(ignoredTypes, el.tagName.toUpperCase()) == -1 && el.prefix != 'g_vml_' && hasOnlyTextualChildren(el) && el.className != "ASTEROIDSYEAH" && el.offsetHeight > 0 ) {
+			if ( indexOf(ignoredTypes, el.tagName.toUpperCase()) == -1 && el.prefix != 'g_vml_' && hasOnlyTextualChildren(el) && el.className != "ASTEROIDSYEAH" && el.offsetHeight > 0 && indexOf('nokill',  el.className) == -1) {
 				el.aSize = size(el);
 				that.enemies.push(el);
 				
